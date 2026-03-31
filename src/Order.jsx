@@ -45,7 +45,7 @@ export default function Order() {
 							value={pizzaType}>
 							{
 								pizzaTypes.map((pizza) =>
-								(<option  value={pizza.id}>
+								(<option key={pizza.id} value={pizza.id}>
 									{pizza.name}
 								</option>)
 								)
