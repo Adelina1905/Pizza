@@ -8,7 +8,7 @@ const App = () => {
   return (
     <StrictMode>
       <div>
-        <h1>Padre Gino's</h1>
+        <h1 className="logo">Padre Gino's</h1>
         {/* <Pizza name="The Pepperoni Pizza" description="some dope pizza yo" image="/public/pizzas/pepperoni.webp" />
       <Pizza name="Americano Pizza" description="french fires and hotdogs" image="/public/pizzas/big_meat.webp" />
       <Pizza name="The Hawaiian" description="pineapple and ham" image="/public/pizzas/hawaiian.webp" />
