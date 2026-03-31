@@ -4,12 +4,14 @@
 //     React.createElement("p", {}, props.description),
 //   ]);
 // };
-
 export const Pizza = (props) => {
     return (
-    <div className="pizza">
+    <div className="pizza" onClick={() =>{
+        console.log("h1");
+    }}>
         <h2>{props.name}</h2>
         <p>{props.description}</p>
+        <img src ={props.image} alt={props.name}/>
     </div>
     )
 }
