@@ -4,7 +4,7 @@
 //     React.createElement("p", {}, props.description),
 //   ]);
 // };
-export const Pizza = (props) => {
+const Pizza = (props) => {
     return (
     <div className="pizza" onClick={() =>{
         console.log("h1");
@@ -15,4 +15,4 @@ export const Pizza = (props) => {
     </div>
     )
 }
-// export default Pizza;
+export default Pizza;

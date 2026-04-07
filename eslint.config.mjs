@@ -1,12 +1,14 @@
 import js from "@eslint/js";
 import globals from "globals";
 import prettier from "eslint-config-prettier";
-import reactPlugin from "eslint-plugin-react"
+import reactPlugin from "eslint-plugin-react";
+import pluginQuery from '@tanstack/eslint-plugin-query'
+
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   js.configs.recommended,
   {
-    ...reactPlugin.configs.recommended,
+    ...reactPlugin.configs.flat.recommended,
     settings: {
       react: {
         version: "detect",
@@ -14,6 +16,7 @@ export default [
     },
   },
   reactPlugin.configs.flat["jsx-runtime"],
+  ...pluginQuery.configs['flat/recommended'],
   {
     files: ["**/*.js", "**/*.jsx"],
     languageOptions: {
@@ -25,9 +28,9 @@ export default [
       },
     },
     rules: {
-      "react/no-unescaped-entities": "off", // You can't write single string ', instead of this you should write &apos
+      "react/no-unescaped-entities": "off",
       "react/prop-types": "off",
-    }
+    },
   },
   prettier,
 ];
